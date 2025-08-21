@@ -5,7 +5,7 @@ export const incidenceData = {
       Sombras: ['Parpadean', 'Ausentes'],
     },
     'Jugabilidad': {
-      Inventario: ['No se abre', 'Objetos desaparecen'],
+      Inventario: ['Se elimina', 'Objetos desaparecen'],
     },
   },
   'League of Legends': {
