@@ -41,7 +41,7 @@ export const incidenceData = {
       Chat: ['No aparece', 'Mensajes duplicados'],
     },
     'Tareas': {
-      Minijuegos: ['No cargan', 'Resultados incorrectos'],
+      Minijuegos: ['No cargan', 'Crashean'],
     },
   },
 }
