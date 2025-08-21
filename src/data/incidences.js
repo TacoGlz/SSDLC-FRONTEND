@@ -1,19 +1,47 @@
 export const incidenceData = {
-  'ACCESOS EXTERIORES': {
-    'Puerta Principal': {
-      Bisagra: ['Oxidada', 'Rota'],
-      Cerradura: ['No funciona', 'Rota'],
+  'Minecraft': {
+    'Gráficos': {
+      Texturas: ['No cargan', 'Glitcheadas'],
+      Sombras: ['Parpadean', 'Ausentes'],
     },
-    'Portón Vehicular': {
-      Motor: ['No abre', 'Hace ruido'],
+    'Jugabilidad': {
+      Inventario: ['Se elimina', 'Objetos desaparecen'],
     },
   },
-  'BAÑO 2': {
-    Lavabo: {
-      Llave: ['Gotea', 'No sale agua'],
+  'League of Legends': {
+    'Conexión': {
+      Ping: ['Alto', 'Inestable'],
+      Desconexión: ['Durante partida', 'Al cargar'],
     },
-    Inodoro: {
-      Taza: ['Rota', 'Sucia'],
+    'Campeones': {
+      Habilidades: ['No se activan', 'Daño incorrecto'],
+    },
+  },
+  'Fortnite': {
+    'Audio': {
+      Sonidos: ['No se escuchan', 'Retraso'],
+      Voz: ['No funciona', 'Eco'],
+    },
+    'Construcción': {
+      Paredes: ['No aparecen', 'Se colocan mal'],
+    },
+  },
+  'Valorant': {
+    'Rendimiento': {
+      FPS: ['Bajo', 'Caídas'],
+      Crash: ['Al iniciar', 'Durante partida'],
+    },
+    'Armas': {
+      Recarga: ['No responde', 'Animación bugueada'],
+    },
+  },
+  'Among Us': {
+    'Sala': {
+      Invitaciones: ['No llegan', 'Error al unir'],
+      Chat: ['No aparece', 'Mensajes duplicados'],
+    },
+    'Tareas': {
+      Minijuegos: ['No cargan', 'Crashean'],
     },
   },
 }
