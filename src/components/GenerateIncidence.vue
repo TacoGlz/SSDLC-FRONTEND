@@ -1,7 +1,11 @@
 <template>
   <div class="incidence-form">
-    <h1>Generar Incidencia</h1>
+    <div class="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="Incidencia" class="icon" />
+      <h1>Generar Incidencia</h1>
+    </div>
     <button class="secondary-btn" @click="goToIncidences">Ver Incidencias Guardadas</button>
+    <button class="back-btn" @click="goBack">← Regresar</button>
     <div class="selectors">
       <label>Lugar:</label>
       <select v-model="placeSelected" class="input">
@@ -58,8 +62,11 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { incidenceData as data } from '@/data/incidences'
 import Swal from 'sweetalert2'
+
+const router = useRouter()
 
 const placeSelected = ref('')
 const itemSelected = ref('')
@@ -136,6 +143,14 @@ const send = () => {
     resetForm()
   })
 }
+
+const goToIncidences = () => {
+  router.push('/incidences')
+}
+
+const goBack = () => {
+  router.push('/incidences')
+}
 </script>
 
 <style scoped>
@@ -143,18 +158,30 @@ const send = () => {
   max-width: 500px;
   margin: 2rem auto;
   padding: 2rem 2.5rem;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+  background: #f9fafb;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  border: 1px solid #e3e7ee;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.icon {
+  width: 40px;
+  height: 40px;
 }
 h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
   color: #1a237e;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 .selectors {
   margin-top: 1rem;
@@ -214,6 +241,23 @@ label {
 }
 .secondary-btn:hover {
   background: #cfd8dc;
+}
+.back-btn {
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 0.6rem 1.2rem;
+  background: #adc0b5;
+  color: #374151;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.back-btn:hover {
+  background: #e3e7ee;
 }
 textarea.input {
   resize: vertical;
